@@ -1,0 +1,35 @@
+Program:
+    settings=Settings ','
+    variables=Variables ','
+    message=Message ','
+    integra=Integra
+;
+
+Settings:
+    'settings' '{'
+        key+=Commands[',']
+    '}'
+;
+
+Variables:
+    'variables' '{'
+        key+=Commands[',']
+    '}'
+;
+
+Message:
+    'message' '{'
+        message=STRING
+    '}'
+;
+
+Integra:
+    'integra' '{'
+        key+=Commands[',']
+    '}'
+;
+
+Commands:
+    label=ID ':' value=STRING
+;
+
